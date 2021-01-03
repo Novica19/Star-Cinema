@@ -1,0 +1,62 @@
+﻿@model IEnumerable<StarCinema.Models.Movie>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.movie_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.runtime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.release_date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.image_path)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.movie_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.runtime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.release_date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.rating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.image_path)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.movie_id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.movie_id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.movie_id })
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
