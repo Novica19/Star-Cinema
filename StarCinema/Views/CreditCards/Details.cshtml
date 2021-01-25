@@ -1,0 +1,58 @@
+﻿@model StarCinema.Models.CreditCard
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CreditCard</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.card_num)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.card_num)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.card_type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.card_type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.card_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.card_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.card_expiry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.card_expiry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.card_cvv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.card_cvv)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.card_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
